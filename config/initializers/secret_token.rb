@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Epilog::Application.config.secret_token = '2b99ac076de9e98ee821b6e47a430a51d0ebf34b0af41b69bb2a85685ec5c7249ebe25c43a758338d380744d5ed291668c0f1a7f7d49baaddc01b1a1a7093382'
+Epilog::Application.config.secret_token = '893203b49f565269349b0e6faf5da3297752fcd03da3ccb78932cdc9a09a9621a6b3dd8ab2ac2b80fdbb3cb5e9c04ace1f46c9510fb4656ed4a4153772d0c2f6'
