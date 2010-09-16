@@ -2,9 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.rc2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 group :development, :test do
   gem 'mysql'
 end
@@ -13,11 +10,7 @@ group :production do
   gem 'pg'
 end
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
+gem 'dropbox'
 
 # To use debugger
 # gem 'ruby-debug'
@@ -34,3 +27,10 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :test, :development do
+  gem "rspec-rails", ">= 2.0.0.beta.19"
+  gem "autotest"
+  gem "webrat"
+end
+
