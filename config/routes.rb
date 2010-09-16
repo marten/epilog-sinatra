@@ -1,6 +1,9 @@
 Epilog::Application.routes.draw do
   
   resources :sites
+  resources :pages
+
+  match '*path' => 'pages#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

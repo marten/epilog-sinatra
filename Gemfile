@@ -29,6 +29,7 @@ gem 'dropbox'
 # end
 
 group :test, :development do
+  gem 'awesome_print'
   gem "rspec-rails", ">= 2.0.0.beta.19"
   gem "autotest"
   gem "webrat"
