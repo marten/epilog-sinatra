@@ -25,7 +25,7 @@ Epilog::Application.routes.draw do
       end
     end
     
-    root :to => 'admin/sites#show'
+    root :to => 'admin/sites#index'
   end
 
   # Sites
