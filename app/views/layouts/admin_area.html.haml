@@ -1,0 +1,35 @@
+!!!HTML5
+%html
+  %head
+  %meta{"http-equiv"=>"content-type", :content=>"text/html; charset=utf-8"}
+  %title Epilog administration panel
+  = stylesheet_link_tag "reset"
+  = stylesheet_link_tag "formtastic"
+  = stylesheet_link_tag "screen_admin"
+  = javascript_include_tag "jquery-1.3.2.min.js"
+  = javascript_include_tag "application.js"
+
+  %body
+    #masthead 
+      %h1
+        %strong Epilog
+
+      #user
+        - if admin_signed_in?
+          Signed in as #{current_admin.email}. Not you?
+          = link_to "Sign out", destroy_admin_session_path
+        - else
+          = link_to "Sign in", new_admin_session_path
+
+      #nav
+        %ul
+          %li= link_to "Sites", admin_sites_path
+    
+    #content
+      - flash.keys.each do |k|
+        #flash(class="#{k}")= flash[k]
+
+      = yield
+      
+    #mastfoot
+      Epilog Admin

@@ -1,0 +1,92 @@
+/*
+Syntax error: Undefined variable: "$masthead_bg".
+        on line 2 of /Users/marten/Dropbox/Projects/epilog/public/stylesheets/sass/masthead.sass
+
+1: #masthead
+2:   background: $masthead_bg
+3:   padding: 1em 2em 0 2em
+4: 
+5:   h1
+6:     color: white
+7:     font-size: 1.1em
+
+Backtrace:
+/Users/marten/Dropbox/Projects/epilog/public/stylesheets/sass/masthead.sass:2
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/script/variable.rb:39:in `_perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/script/node.rb:61:in `perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/prop_node.rb:132:in `perform!'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:305:in `_perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:213:in `perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `map'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:317:in `perform!'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/rule_node.rb:191:in `perform!'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:305:in `_perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:213:in `perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `map'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:317:in `perform!'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/root_node.rb:59:in `perform!'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:305:in `_perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/node.rb:213:in `perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/root_node.rb:37:in `perform'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/tree/root_node.rb:29:in `render'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:220:in `update_stylesheet'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:85:in `update_stylesheets'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:78:in `each'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:78:in `update_stylesheets'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:76:in `each'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:76:in `update_stylesheets'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin.rb:50:in `check_for_updates'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/haml-3.0.18/lib/sass/plugin/rack.rb:40:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/warden-0.10.7/lib/warden/manager.rb:35:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/flash.rb:177:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/cookies.rb:278:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activerecord-3.0.0.rc2/lib/active_record/query_cache.rb:32:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activerecord-3.0.0.rc2/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activerecord-3.0.0.rc2/lib/active_record/query_cache.rb:12:in `cache'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activerecord-3.0.0.rc2/lib/active_record/query_cache.rb:31:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activerecord-3.0.0.rc2/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activesupport-3.0.0.rc2/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/railties-3.0.0.rc2/lib/rails/rack/logger.rb:13:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/activesupport-3.0.0.rc2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc2/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/railties-3.0.0.rc2/lib/rails/application.rb:168:in `call'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/railties-3.0.0.rc2/lib/rails/application.rb:77:in `send'
+/Users/marten/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/gems/1.8/gems/railties-3.0.0.rc2/lib/rails/application.rb:77:in `method_missing'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/rack/application_spawner.rb:120:in `run'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/rack/application_spawner.rb:65:in `spawn_application'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/utils.rb:252:in `safe_fork'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/rack/application_spawner.rb:58:in `spawn_application'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/rack/application_spawner.rb:41:in `spawn_application'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/spawn_manager.rb:150:in `spawn_application'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/spawn_manager.rb:278:in `handle_spawn_application'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/Users/marten/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/passenger-2.2.15/bin/passenger-spawn-server:61
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$masthead_bg\".\A         on line 2 of /Users/marten/Dropbox/Projects/epilog/public/stylesheets/sass/masthead.sass\A \A 1: #masthead\A 2:   background: $masthead_bg\A 3:   padding: 1em 2em 0 2em\A 4: \A 5:   h1\A 6:     color: white\A 7:     font-size: 1.1em"; }
