@@ -5,6 +5,7 @@ gem 'haml'
 gem 'formtastic', '~> 1.1.0'
 gem 'devise', "~> 1.1"
 gem 'dropbox'
+gem 'mime-types'
 
 group :development do
   gem 'awesome_print'

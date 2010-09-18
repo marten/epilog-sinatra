@@ -114,6 +114,7 @@ DEPENDENCIES
   dropbox
   formtastic (~> 1.1.0)
   haml
+  mime-types
   mysql
   pg
   rails (= 3.0.0.rc2)
