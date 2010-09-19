@@ -6,7 +6,7 @@ gem 'formtastic', '~> 1.1.0'
 gem 'devise', "~> 1.1"
 gem 'dropbox'
 gem 'mime-types'
-gem 'liquid'
+gem 'liquid', '< 2.2'
 gem 'rdiscount'
 
 group :development do
