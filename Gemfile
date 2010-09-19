@@ -1,11 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc2'
+gem 'rails', '~> 3.0.0'
 gem 'haml'
 gem 'formtastic', '~> 1.1.0'
 gem 'devise', "~> 1.1"
 gem 'dropbox'
 gem 'mime-types'
+gem 'liquid'
+gem 'rdiscount'
 
 group :development do
   gem 'awesome_print'
@@ -24,4 +26,3 @@ group :test, :development do
   gem "autotest"
   gem "webrat"
 end
-
