@@ -10,8 +10,8 @@ class Sites::FilesController < SiteAreaController
     mapped_path  = "/Site" + UrlToFileMapper.map(request.fullpath)
 
     begin
-      @data = @dropbox.download(path)
-      @path = path
+      @data = @dropbox.download(mapped_path)
+      @path = mapped_path
     rescue Dropbox::UnsuccessfulResponseError => e
       logger.debug "Tried getting #{path} but got #{e.message}"
       # 404 if we didn't get anything
