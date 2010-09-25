@@ -18,11 +18,6 @@ class DropboxDirectory < ActiveRecord::Base
     remote_files = metadata.contents.sort_by(&:path)
     local_files  = dropbox_files.all.sort_by(&:path)
     
-    puts '-----------------------'
-    puts remote_files.inspect
-    puts local_files.inspect
-    puts '-----------------------'
-    
     to_create = []
     to_update = []
     to_delete = []
@@ -52,17 +47,12 @@ class DropboxDirectory < ActiveRecord::Base
   
       # Remote and local are at the same file. We might need to update
       if remote.path == local.path
-        # TODO, need to know what method to call on remote for this
-        # if not remote.date == local.date
-        #   to_update << {:remote => remote, :local => local}
-        # end
+        if not remote.modified == local.date
+          to_update << {:remote => remote, :local => local}
+        end
       end
     end
 
-    puts to_create.inspect
-    puts to_update.inspect
-    puts to_delete.inspect
-    
     to_create.each {|i| print 'A'; dropbox_files.create(:path => i.path, :date => i.modified, :size => i.bytes) }
     to_update.each {|i| print 'U'; i[:local].update_attributes(:date => i[:remote].modified, :size => i[:remote].bytes)}
     to_delete.each {|i| print 'D'; i.destroy }
