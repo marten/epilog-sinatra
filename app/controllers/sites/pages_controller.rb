@@ -46,7 +46,7 @@ class Sites::PagesController < SiteAreaController
     if File.extname(mapped_path) == '.html'
       logger.info "Rendering layout"
       @template = @dropbox.download(File.join("/Site/templates/default.liquid"))
-      @rendered_data = Liquid::Template.parse(@template).render('content' => @rendered_content)
+      @rendered_data = Liquid::Template.parse(@template).render('content' => @rendered_content, 'site' => @site)
     else
       @rendered_data = @rendered_content
     end

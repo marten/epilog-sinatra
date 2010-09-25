@@ -10,30 +10,23 @@ class Sites::PostsController < SiteAreaController
   def show
     @date = Time.gm(params[:year], params[:month], params[:day])
     @slug = params[:slug]
-    @filename = "/blog/#{@date.strftime("%Y-%m-%d")}-#{@slug}"
+    @filename = "Site/blog/#{@date.strftime("%Y-%m-%d")}-#{@slug}"
     
-    posts = @site.dropbox.metadata('/Site/blog').contents
-    post_metadata = posts.first {|i| i.path.starts_with?("Site" + @filename) }
-
-    render :text => "404 #{@filename}" and return if not post_metadata
+    @file = @site.blog.dropbox_files.where("path LIKE ?", "#{@filename}.%").first
+    @post = @file.item
     
-    ### We'll need to find out which file we want to get out of dropbox
-    @data = @dropbox.download(post_metadata.path)
-    @path = post_metadata.path
-  
-    logger.debug "Went with #{@path}"
-
-    # 404 if we didn't get anything
-    render :text => "404 not found: #{paths_to_try.inspect}" and return if not @data
-
+    if (not @file) or (not @post) or (not Post === @post)
+      render :text => "404 #{@filename}" and return
+    end
+    
     # Render things like markdown and textile
-    case File.extname(@path)
+    case File.extname(@file.path)
     when ".html"
-      @rendered_content = @data
+      @rendered_content = @file.contents
     when ".markdown"
-      @rendered_content = RDiscount.new(@data).to_html
+      @rendered_content = RDiscount.new(@file.contents).to_html
     else
-      @rendered_content = @data
+      @rendered_content = @file.contents
     end
   
     # Render layouts

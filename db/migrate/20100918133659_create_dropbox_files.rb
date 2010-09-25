@@ -1,12 +1,13 @@
 class CreateDropboxFiles < ActiveRecord::Migration
   def self.up
     create_table :dropbox_files do |t|
-      t.string  :path
-      t.date    :date
-      t.integer :size
-      t.text    :contents
+      t.string   :path
+      t.datetime :modified
+      t.integer  :size
+      t.text     :contents
       
       t.references :dropbox_directory
+      t.references :item, :polymorphic => true
       
       t.timestamps
     end

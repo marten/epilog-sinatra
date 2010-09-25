@@ -1,10 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
   def self.up
     create_table :posts do |t|
-      t.references :site
-      t.references :section
       t.string :title
       t.text   :body
+
+      t.references :site
       t.timestamps
     end
   end

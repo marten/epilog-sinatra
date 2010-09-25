@@ -1,6 +1,9 @@
 class DropboxDirectory < ActiveRecord::Base
   belongs_to :site
   has_many :dropbox_files
+
+  attr_readonly :path
+  validates_format_of :path, :with => /^\//, :message => "should be absolute"
   
   def metadata
     @metadata ||= site.dropbox.metadata(path)
@@ -12,7 +15,10 @@ class DropboxDirectory < ActiveRecord::Base
   
   def synchronize
     return if fresh?
-    
+    synchronize!
+  end
+  
+  def synchronize!
     print "Synchronizing #{path}... "
     
     remote_files = metadata.contents.sort_by(&:path)
@@ -47,14 +53,17 @@ class DropboxDirectory < ActiveRecord::Base
   
       # Remote and local are at the same file. We might need to update
       if remote.path == local.path
-        if not remote.modified == local.date
-          to_update << {:remote => remote, :local => local}
-        end
+        to_update << {:remote => remote, :local => local} if remote.modified < local.modified
+        remote_index += 1
+        local_index  += 1
+        next
+      else
+        raise "Should not happen"
       end
     end
 
-    to_create.each {|i| print 'A'; dropbox_files.create(:path => i.path, :date => i.modified, :size => i.bytes) }
-    to_update.each {|i| print 'U'; i[:local].update_attributes(:date => i[:remote].modified, :size => i[:remote].bytes)}
+    to_create.each {|i| print 'A'; dropbox_files.create(:path => i.path, :modified => i.modified, :size => i.bytes) }
+    to_update.each {|i| print 'U'; i[:local].update_attributes(:modified => i[:remote].modified, :size => i[:remote].bytes)}
     to_delete.each {|i| print 'D'; i.destroy }
     
     update_attribute(:version_hash, metadata.hash)

@@ -48,17 +48,20 @@ ActiveRecord::Schema.define(:version => 20100925070150) do
 
   create_table "dropbox_files", :force => true do |t|
     t.string   "path"
-    t.date     "date"
+    t.datetime "modified"
     t.integer  "size"
     t.text     "contents"
     t.integer  "dropbox_directory_id"
+    t.integer  "item_id"
+    t.string   "item_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
     t.integer  "site_id"
-    t.integer  "dropbox_file_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
