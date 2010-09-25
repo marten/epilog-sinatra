@@ -2,7 +2,7 @@ class CreateDropboxDirectories < ActiveRecord::Migration
   def self.up
     create_table :dropbox_directories do |t|
       t.string :path
-      t.string :hash
+      t.string :version_hash
       t.references :site
       t.timestamps
     end

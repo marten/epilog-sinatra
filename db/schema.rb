@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20100925070150) do
 
   create_table "dropbox_directories", :force => true do |t|
     t.string   "path"
-    t.string   "hash"
+    t.string   "version_hash"
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20100925070150) do
 
   create_table "dropbox_files", :force => true do |t|
     t.string   "path"
+    t.date     "date"
     t.integer  "size"
     t.text     "contents"
     t.integer  "dropbox_directory_id"

@@ -1,10 +1,13 @@
 class CreateDropboxFiles < ActiveRecord::Migration
   def self.up
     create_table :dropbox_files do |t|
-      t.string :path
+      t.string  :path
+      t.date    :date
       t.integer :size
-      t.text :contents
+      t.text    :contents
+      
       t.references :dropbox_directory
+      
       t.timestamps
     end
   end

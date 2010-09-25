@@ -25,4 +25,5 @@ group :test, :development do
   gem "rspec-rails", ">= 2.0.0.beta.19"
   gem "autotest"
   gem "webrat"
+  gem 'ruby-debug'
 end
