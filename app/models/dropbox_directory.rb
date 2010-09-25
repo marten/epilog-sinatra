@@ -63,8 +63,8 @@ class DropboxDirectory < ActiveRecord::Base
     puts to_update.inspect
     puts to_delete.inspect
     
-    to_create.each {|i| print 'A'; dropbox_files.create(:path => i.path, :date => i.modified, :size => i.bytes, :contents => site.dropbox.download(i.path)) }
-    to_update.each {|i| print 'U'; i[:local].update_attributes(:date => i[:remote].modified, :size => i[:remote].bytes, :contents => site.dropbox.download(i[:remote].path))}
+    to_create.each {|i| print 'A'; dropbox_files.create(:path => i.path, :date => i.modified, :size => i.bytes) }
+    to_update.each {|i| print 'U'; i[:local].update_attributes(:date => i[:remote].modified, :size => i[:remote].bytes)}
     to_delete.each {|i| print 'D'; i.destroy }
     
     update_attribute(:version_hash, metadata.hash)
