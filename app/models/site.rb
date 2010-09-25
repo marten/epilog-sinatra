@@ -6,6 +6,9 @@ class Site < ActiveRecord::Base
   has_many :posts
   has_many :dropbox_directories
 
+  has_many :templates
+  has_many :stylesheets
+
   accepts_nested_attributes_for :users
 
   liquid_methods :posts
@@ -29,5 +32,10 @@ class Site < ActiveRecord::Base
   end
   
   def blog;        dropbox_directories.find_or_create_by_path("/Site/blog");        end
+  def photos;      dropbox_directories.find_or_create_by_path("/Site/photos");      end
+  def albums;      dropbox_directories.find_or_create_by_path("/Site/albums");      end
+  
+  def templates;   dropbox_directories.find_or_create_by_path("/Site/templates");   end
+  def stylesheets; dropbox_directories.find_or_create_by_path("/Site/stylesheets"); end
 
 end
