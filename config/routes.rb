@@ -1,19 +1,8 @@
-class IsUserSite
-  def self.matches?(request)
-    request.subdomain != "admin"
-  end
-end
-
-class NotUserSite
-  def self.matches?(request)
-    not IsUserSite.matches?(request)
-  end
-end
-
+require 'route_constraints'
 
 Epilog::Application.routes.draw do
   # Administration and management area
-  constraints(NotUserSite) do
+  constraints(RouteConstraints::SiteArea::IsNotSite) do
     devise_for :admins
     devise_for :users
 
@@ -29,8 +18,25 @@ Epilog::Application.routes.draw do
   end
 
   # Sites
-  constraints(IsUserSite) do
-    match '*path' => 'sites/pages#show'
+  constraints(RouteConstraints::SiteArea::IsSite) do
+    constraints(RouteConstraints::SiteArea::PageRequest) do
+      # Blogs
+      match 'blog/:year/:month/:day/:slug' => 'sites/posts#show'
+      match 'blog(/:year(/:month(/:day)))' => 'sites/posts#index'
+
+      # # Photos
+      # match 'photos/:year/:month/:day/:slug' => 'sites/posts#show'
+      # match 'photos(/:year(/:month(/:day)))' => 'sites/posts#index'
+      # 
+      # # Albums
+      # match 'albums/:year/:month/:day/:slug' => 'sites/posts#show'
+      # match 'albums(/:year(/:month(/:day)))' => 'sites/posts#index'
+      
+      # All other pages
+      match '*path' => 'sites/pages#show'
+    end
+    
+    match '*path' => 'sites/files#show'
     root :to => 'sites/pages#show'
   end
 end

@@ -3,6 +3,8 @@ class Site < ActiveRecord::Base
   
   has_many :domains
   has_many :users
+  has_many :sections
+  has_many :dropbox_directories
 
   accepts_nested_attributes_for :users
 
@@ -19,12 +21,9 @@ class Site < ActiveRecord::Base
       @dropbox
     end
   end
-
-  def config
-    return @config if @config
-    
-    config_data ||= dropbox.download('/Site/config.yml')
-    @config = HashWithIndifferentAccess.new(YAML::load(config_data)) if config_data
-  end
   
+  def path
+    '/Site'
+  end
+
 end

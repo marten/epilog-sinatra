@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100918133659) do
+ActiveRecord::Schema.define(:version => 20100925070150) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -38,10 +38,26 @@ ActiveRecord::Schema.define(:version => 20100918133659) do
     t.datetime "updated_at"
   end
 
+  create_table "dropbox_directories", :force => true do |t|
+    t.string   "path"
+    t.string   "hash"
+    t.integer  "site_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "dropbox_files", :force => true do |t|
     t.string   "path"
     t.integer  "size"
     t.text     "contents"
+    t.integer  "dropbox_directory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "dropbox_file_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,6 +65,8 @@ ActiveRecord::Schema.define(:version => 20100918133659) do
   create_table "sections", :force => true do |t|
     t.string   "title"
     t.string   "slug"
+    t.string   "kind"
+    t.string   "dropbox_hash"
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"

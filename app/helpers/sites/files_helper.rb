@@ -1,0 +1,2 @@
+module Sites::FilesHelper
+end

@@ -3,7 +3,8 @@ class CreateSections < ActiveRecord::Migration
     create_table :sections do |t|
       t.string :title
       t.string :slug
-      
+      t.string :kind
+      t.string :dropbox_hash
       t.references :site
       
       t.timestamps

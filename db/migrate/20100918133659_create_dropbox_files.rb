@@ -4,6 +4,7 @@ class CreateDropboxFiles < ActiveRecord::Migration
       t.string :path
       t.integer :size
       t.text :contents
+      t.references :dropbox_directory
       t.timestamps
     end
   end
