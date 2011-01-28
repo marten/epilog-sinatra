@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100925070150) do
+ActiveRecord::Schema.define(:version => 20100926104438) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20100925070150) do
     t.string   "item_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_id"
   end
 
   create_table "posts", :force => true do |t|
@@ -80,6 +81,12 @@ ActiveRecord::Schema.define(:version => 20100925070150) do
     t.string   "title"
     t.string   "domain"
     t.string   "dropbox_session"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "templates", :force => true do |t|
+    t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

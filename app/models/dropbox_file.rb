@@ -1,6 +1,9 @@
 class DropboxFile < ActiveRecord::Base
+  belongs_to :site
   belongs_to :dropbox_directory
   belongs_to :item, :polymorphic => true, :autosave => true
+
+  validates_presence_of :site 
 
   attr_readonly :path
   validates_presence_of :path
@@ -10,14 +13,14 @@ class DropboxFile < ActiveRecord::Base
   
   before_save do
     if text_file? and (new_record? or modified_changed?)
-      self.contents = dropbox_directory.site.dropbox.download(path)
+      self.contents = site.dropbox.download(path)
     end
   end
   
   before_save(:on => :create) do
     if item.nil?
       if path =~ /^Site\/blog\//
-        self.item = Post.new(:site => dropbox_directory.site, :dropbox_file => self)
+        self.item = Post.new(:site => site, :dropbox_file => self)
       end
     end
   end
@@ -43,7 +46,7 @@ class DropboxFile < ActiveRecord::Base
     return read_attribute(:contents) if text_file?
     return @contents_cache if @contents_cache
     logger.info "  DropboxFile #{id} loading contents from Dropbox. [THIS MIGHT BE SLOW]"
-    @contents_cache ||= dropbox_directory.site.dropbox.download(path)
+    @contents_cache ||= site.dropbox.download(path)
   end
   
 end

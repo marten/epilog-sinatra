@@ -3,8 +3,9 @@ class Site < ActiveRecord::Base
   
   has_many :domains
   has_many :users
-  has_many :posts
+  has_many :posts, :include => :dropbox_file
   has_many :dropbox_directories
+  has_many :dropbox_files
 
   has_many :templates
   has_many :stylesheets
@@ -37,5 +38,13 @@ class Site < ActiveRecord::Base
   
   def templates;   dropbox_directories.find_or_create_by_path("/Site/templates");   end
   def stylesheets; dropbox_directories.find_or_create_by_path("/Site/stylesheets"); end
+
+  def synchronize
+    blog.synchronize
+    #photos.synchronize
+    #albums.synchronize
+    templates.synchronize
+    stylesheets.synchronize
+  end
 
 end
