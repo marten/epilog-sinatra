@@ -3,7 +3,7 @@ require 'sinatra'
 require 'haml'
 a = 10
 
-class Directory
+class Controller
 
   def initialize(name)
     puts "aangenaam, ik ben #{name}"
@@ -13,9 +13,9 @@ class Directory
   def get_child(name)   
     case name
     when 'blog'
-      dir = BlogDirectory.new(name)
+      dir = BlogController.new(name)
     else
-      dir = SiteDirectory.new(name)
+      dir = SiteController.new(name)
     end
     return dir
   end
@@ -36,15 +36,15 @@ class Directory
   end
 end
 
-class BlogDirectory < Directory; end
-class SiteDirectory < Directory
+class BlogController < Controller; end
+class SiteController < Controller
   def has_children?
     return true
   end
 end
-class AlbumDirectory < Directory; end
+class AlbumController < Controller; end
 
-@@root = SiteDirectory.new('')
+@@root = SiteController.new('')
 
 def path_array(path)
   path.split('/')[1..-1] || []
@@ -57,20 +57,20 @@ end
 
 set(:kind) { |value| condition { @dir.is_a?(value) } }
 
-get '*', :kind => AlbumDirectory do
+get '*', :kind => AlbumController do
   'je moeder is een album'
 end
 
-get '(.*)/view/123$', :kind => AlbumDirectory do
+get '(.*)/view/123$', :kind => AlbumController do
 
 end
 
 # voor blog
-get '*', :kind => BlogDirectory do
+get '*', :kind => BlogController do
   '<!DOCTYPE html><html>Hello world! I feel blogtastic!!!'
 end
 
-get '*', :kind => SiteDirectory do
+get '*', :kind => SiteController do
   'hoi site'
 end
 
