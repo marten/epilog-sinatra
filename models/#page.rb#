@@ -1,7 +1,0 @@
-class Page
-  attr_accessor :raw_html
-
-  def initialize(options = {})
-    
-      
-end
