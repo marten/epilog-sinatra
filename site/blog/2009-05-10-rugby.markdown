@@ -1,0 +1,9 @@
+--- 
+wordpress_id: 159
+layout: post
+title: Rugby
+wordpress_url: http://journal.martenveldthuis.com/?p=159
+---
+<img class="alignnone size-large wp-image-84" title="2009-05-10-rugby-1" src="http://journal.martenveldthuis.com/wp-content/uploads/2010/05/2009-05-10-rugby-1-620x411.jpg" alt="" width="620" height="411" />
+
+<img class="alignnone size-large wp-image-85" title="2009-05-10-rugby-2" src="http://journal.martenveldthuis.com/wp-content/uploads/2010/05/2009-05-10-rugby-2-620x411.jpg" alt="" width="620" height="411" />

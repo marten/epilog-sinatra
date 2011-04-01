@@ -1,0 +1,32 @@
+body {
+	margin: 0 auto;
+	width: 800px;
+	font-family: Helvetica;
+}
+
+#masthead {
+	position: relative;
+	overflow: auto;
+	padding-top: 0.1em;
+}
+
+#masthead h1 {
+	float: left;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#masthead ul {
+	float: right;
+	list-style: none;
+}
+
+#masthead ul li {
+	display: inline;
+}
+
+#masthead ul li a {
+	color: black;
+	text-decoration: none;
+	margin-left: 1em;
+}

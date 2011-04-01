@@ -1,0 +1,9 @@
+--- 
+wordpress_id: 12
+layout: post
+title: USB over RJ45
+wordpress_url: http://journal.martenveldthuis.com/?p=12
+---
+<img class="alignnone size-large wp-image-19" title="USB-RJ45 adapters" src="http://journal.martenveldthuis.com/wp-content/uploads/2010/05/DSC7675-620x251.jpg" alt="" width="620" height="251" />
+
+<a href="http://journal.martenveldthuis.com/?attachment_id=19"></a>I came across this little dinky at <a href="http://www.dealextreme.com/details.dx/sku.23553">DealExtreme</a>. Costs only a couple of bucks, and it lets you turn a normal network cable into a long USB-cable. Anyone who ever shoots tethered should have one of these.

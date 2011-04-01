@@ -1,0 +1,9 @@
+--- 
+wordpress_id: 135
+layout: post
+title: Shooting on the stairs
+wordpress_url: http://journal.martenveldthuis.com/?p=135
+---
+<img class="alignnone size-large wp-image-95" title="2009-06-11-blue-feet" src="http://journal.martenveldthuis.com/wp-content/uploads/2010/05/2009-06-11-blue-feet-620x411.jpg" alt="" width="620" height="411" />
+
+This one is from the RUG gala earlier this month.

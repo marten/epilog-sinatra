@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 72
+layout: post
+title: Microsoft SamSmith
+wordpress_url: http://journal.martenveldthuis.com/?p=72
+---
+Going to be a big hit: online lyrics, Microsoft Sam and SongSmith. You read it here first.

@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 124
+layout: post
+title: Bunker
+wordpress_url: http://journal.martenveldthuis.com/?p=124
+---
+<img class="alignnone size-large wp-image-101" title="2009-07-25-bunker" src="http://journal.martenveldthuis.com/wp-content/uploads/2010/05/2009-07-25-bunker-620x411.jpg" alt="" width="620" height="411" />

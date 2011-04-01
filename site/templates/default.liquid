@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Marten Veldthuis</title>
+		<link rel="stylesheet" href="/style.css">
+	</head>
+	<body>
+		<div id="masthead">
+			<h1><a href="/">Marten Veldthuis</a></h1>
+			<ul>
+				<li><a href="#">Coder</a></li>
+				<li><a href="#">Photographer</a></li>
+			</ul>
+		</div>
+		
+		<ul>
+			{% for post in site.posts %}
+			<li>{{ post.title }}</li>
+			{% endfor %}
+		</ul>
+		
+		<div id="content">
+		  {{ content }}
+		</div>
+	</body>
+</html>
