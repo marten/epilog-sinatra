@@ -4,6 +4,7 @@ require 'haml'
 require 'rdiscount'
 
 # Onze files
+require './config/mongoid'
 require './controllers'
 require './files'
 
@@ -34,13 +35,13 @@ class Epilog < Sinatra::Base
   end
   
   get '*/:file', :kind => SiteController do
-    output = EpilogFile.for(File.join(@dir.pathname,params[:file])).output(self)
+    output = EpilogFile.for(File.join(@dir.pathname,params[:file])).output
     if output[:send_file]
       send_file output[:send_file]
       return
     end
     
-    haml :page, :locals => content
+    haml :page, :locals => output
   end
   
   get '*' do
