@@ -1,23 +1,2 @@
-defaults: &defaults
-  database: epilog_<%= ENV['RACK_ENV'] %>
-  host: localhost
-  autocreate_indexes: false
-  allow_dynamic_fields: true
-  include_root_in_json: false
-  parameterize_keys: true
-  persist_in_safe_mode: false
-  raise_not_found_error: true
-  reconnect_time: 3
-
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-# set these environment variables on your prod server
-production:
-  <<: *defaults
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
+host: localhost
+database: epilog

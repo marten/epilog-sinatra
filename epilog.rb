@@ -1,10 +1,5 @@
-# Libraries
-require 'sinatra/base'
-require 'haml'
-require 'rdiscount'
+require_relative "config/boot"
 
-# Onze files
-require './config/mongoid'
 require './controllers'
 require './files'
 
@@ -14,7 +9,7 @@ end
 
 class Epilog < Sinatra::Base
   configure do
-    set :rootcontroller, SiteController.new("/home/marten/Dropbox/Site")
+    set :rootcontroller, SiteController.new("/home/mark/devel/epilog/site")
   end
   
   before do

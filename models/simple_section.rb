@@ -1,0 +1,3 @@
+class SimpleSection < Section
+
+end
